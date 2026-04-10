@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio — Vishal Umaria</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100;200;300;400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<style>
+
+:root{
+  --c0:#152238;--c1:#1F3A5F;--c2:#4E6E8E;--c3:#8FBFE0;--c4:#DFEBF6;--c5:#E1E8EF;
+  --white:#FFFFFF;--bg:#F1F6FB;--text-light:#5a7a8a;
+  --grad-dark:linear-gradient(135deg,#152238 0%,#1F3A5F 60%,#4E6E8E 100%);
+  --font-display:'Lexend Tera',sans-serif;
+  --font-body:'Montserrat',sans-serif;
+  --radius:18px;--radius-sm:10px;
+  --t:all 0.38s cubic-bezier(0.25,0.8,0.25,1);
+  --shadow:0 8px 32px rgba(21,34,56,0.10);
+  --shadow-lg:0 24px 56px rgba(21,34,56,0.18);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--c0);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:100px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(21,34,56,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(143,191,224,0.12);}
+.nav-logo{font-family:var(--font-display);font-size:1.0rem;font-weight:1000;letter-spacing:0.15em;text-transform:uppercase;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--c3);}
+.nav-links{display:flex;gap:6px;list-style:none;}
+.nav-links a{font-size:0.70rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);text-decoration:none;padding:7px 13px;border-radius:100px;transition:var(--t);}
+.nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(143,191,224,0.18);}
+
+.page-header{padding:150px 5% 80px;background:var(--grad-dark);position:relative;overflow:hidden;}
+.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 90% 50%,rgba(143,191,224,0.13) 0%,transparent 70%);}
+.page-header::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(143,191,224,0.05) 0px,transparent 0px),linear-gradient(90deg,rgba(143,191,224,0.05) 0px,transparent 0px);background-size:55px 55px;}
+.ph-inner{position:relative;z-index:2;max-width:1400px;margin:0 auto;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;}
+.eyebrow-line{width:28px;height:1px;background:var(--c3);}
+.eyebrow-text{font-size:0.6rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--c3);}
+.page-title{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:200;letter-spacing:-0.04em;color:var(--white);line-height:1.2;margin-bottom:16px;}
+.page-title strong{font-weight:400;color:var(--c3);}
+.page-sub{font-size:0.95rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.6);max-width:540px;}
+
+.page-body{max-width:1400px;margin:0 auto;padding:80px 5% 100px;}
+.s-label{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;}
+.s-label-line{width:22px;height:1px;background:var(--c2);}
+.s-label-text{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--c2);}
+.block-title{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.4rem);font-weight:200;color:var(--c0);line-height:1.3;margin-bottom:16px;letter-spacing:-0.02em;}
+.block-title strong{font-weight:400;color:var(--c1);}
+
+footer{background:var(--c0);padding:36px 5%;border-top:1px solid rgba(143,191,224,0.1);}
+.footer-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-logo{font-family:var(--font-display);font-size:0.6rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);}
+.footer-copy{font-size:0.68rem;font-weight:300;color:rgba(255,255,255,0.22);}
+.footer-nav{display:flex;gap:20px;}
+.footer-nav a{font-size:0.66rem;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--t);}
+.footer-nav a:hover{color:var(--c3);}
+
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-up:nth-child(2){transition-delay:.08s;}
+.fade-up:nth-child(3){transition-delay:.16s;}
+.fade-up:nth-child(4){transition-delay:.24s;}
+.fade-up:nth-child(5){transition-delay:.32s;}
+.fade-up:nth-child(6){transition-delay:.40s;}
+
+
+#hero{min-height:100vh;display:flex;align-items:center;padding:140px 5% 80px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,rgba(143,191,224,0.12),transparent 40%),linear-gradient(135deg,#152238 0%,#1F3A5F 55%,#4E6E8E 100%);}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(143,191,224,0.15) 0%,transparent 70%);pointer-events:none;}
+#hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(143,191,224,0.05) 0px,transparent 0px),linear-gradient(90deg,rgba(143,191,224,0.05) 0px,transparent 0px);background-size:60px 60px;pointer-events:none;}
+.hero-inner{position:relative;z-index:2;max-width:1400px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(143,191,224,0.15);border:1px solid rgba(143,191,224,0.3);border-radius:100px;padding:6px 16px;margin-bottom:28px;}
+.hero-tag span{font-size:0.62rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--c3);}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--c3);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.8);}}
+.hero-title{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300;line-height:1.25;color:var(--white);letter-spacing:-0.06em;margin-bottom:20px;}
+.hero-title strong{font-weight:400;color:var(--c3);}
+.hero-sub{font-size:1rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,0.62);max-width:420px;margin-bottom:40px;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-p{padding:13px 28px;background:var(--white);color:var(--c0);font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border:none;border-radius:100px;cursor:pointer;text-decoration:none;transition:var(--t);display:inline-flex;align-items:center;gap:8px;}
+.btn-p:hover{background:var(--c4);transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+.btn-o{padding:13px 28px;background:transparent;color:var(--white);font-family:var(--font-body);font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.35);border-radius:100px;cursor:pointer;text-decoration:none;transition:var(--t);display:inline-flex;align-items:center;gap:8px;}
+.btn-o:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+.hero-visual{display:flex;justify-content:center;}
+.hero-card{background:rgba(255,255,255,0.07);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.14);border-radius:var(--radius);padding:32px;width:100%;max-width:500px;position:relative;}
+.hero-card::before{content:'';position:absolute;top:-1px;left:28px;right:28px;height:2px;background:linear-gradient(90deg,transparent,var(--c3),transparent);border-radius:100px;}
+.profile-row{display:flex;align-items:center;gap:18px;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.avatar img{width:98%;height:98%;object-fit:cover;border-radius:50%;background:linear-gradient(135deg,var(--c3),var(--c4));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--c0);flex-shrink:0;border:0px solid rgba(255,255,255,0.18);}
+.avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--c3),var(--c4));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--c0);flex-shrink:0;border:0px solid rgba(255,255,255,0.18);}
+.p-name{font-size:1.5rem;font-weight:600;color:var(--white);line-height:1.2;}
+.p-role{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:6px;letter-spacing:0.05em;line-height:1.6;}
+.skill-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(143,191,224,0.15);border:1px solid rgba(143,191,224,0.25);border-radius:100px;padding:6px 14px;font-size:0.7rem;font-weight:500;color:var(--c3);letter-spacing:0.04em;}
+
+#quicklinks{padding:80px 5%;background:var(--c0);}
+.ql-inner{max-width:1400px;margin:0 auto;}
+.ql-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;padding-bottom:24px;border-bottom:1px solid rgba(143,191,224,0.15);}
+.ql-title{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.4rem);font-weight:300;color:var(--white);letter-spacing:-0.015em;}
+.ql-title strong{font-weight:400;color:var(--c3);}
+.ql-count{font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+.ql-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(143,191,224,0.08);border-radius:var(--radius);overflow:hidden;}
+.ql-card{display:block;text-decoration:none;padding:32px 28px;background:rgba(143,191,224,0.06);transition:var(--t);position:relative;overflow:hidden;}
+.ql-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--c3),var(--c2));transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;}
+.ql-card:hover{background:var(--c2);}
+.ql-card:hover::before{transform:scaleX(1);}
+.ql-num{font-family:var(--font-display);font-size:0.58rem;font-weight:200;letter-spacing:0.2em;color:rgba(143,191,224,0.3);margin-bottom:22px;display:block;}
+.ql-name{font-family:var(--font-display);font-size:clamp(1.1rem,1.1vw,0.85rem);font-weight:300;color:var(--white);letter-spacing:-0.02em;line-height:1.3;margin-bottom:12px;}
+.ql-desc{font-size:0.7rem;font-weight:300;color:rgba(255,255,255,0.36);line-height:1.65;}
+.ql-arrow{display:inline-flex;align-items:center;gap:6px;margin-top:22px;font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(143,191,224,0.35);transition:var(--t);}
+.ql-card:hover .ql-arrow{color:var(--c3);}
+.ql-card.ql-wide{grid-column:span 2;}
+.ql-card.ql-accent{background:rgba(143,191,224,0.06);}
+
+@media(max-width:960px){.nav-links{display:none;}.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.ql-grid{grid-template-columns:1fr 1fr;}.ql-card.ql-wide{grid-column:span 2;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Vishal <span>Umaria</span></a>
+  <ul class="nav-links"><li><a href="index.html" class="active">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><div class="hero-dot"></div><span>MBA Candidate · Open to Opportunities</span></div>
+      <h1 class="hero-title">Combining Business <strong>Strategy</strong><br/>with Analytical <strong>Insight</strong></h1>
+      <p class="hero-sub">Applying structured thinking and data analysis to solve real-world business problems.</p>
+      <div class="hero-ctas">
+        <a href="projects.html" class="btn-p">View Projects →</a>
+        <a href="contact.html" class="btn-o">Let's Connect</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="profile-row">
+          <div class="avatar">
+  <img src="img/your-photo.jpg" alt="VU">
+</div>
+          <div><div class="p-name">Vishal Umaria</div><div class="p-role">Strategy · Operations · Finance · Analytics</div></div>
+        </div>
+        <div class="skill-chips">
+          <span class="chip">Market Entry & Growth Strategy</span><span class="chip">Cost Optimization</span>
+          <span class="chip">Process Improvement</span><span class="chip">KPI & Metrics Design</span>
+          <span class="chip">Financial Analysis & Modeling</span><span class="chip">Forecasting</span>
+          <span class="chip">Investments & Valuation</span><span class="chip">Visual Dashboards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quicklinks">
+  <div class="ql-inner">
+    <div class="ql-header">
+      <h2 class="ql-title">Explore my <strong>portfolio</strong></h2>
+
+    </div>
+    <div class="ql-grid">
+      <a href="about.html" class="ql-card">
+        <span class="ql-num">01</span>
+        <div class="ql-name">About &amp;<br/>Experience</div>
+        <div class="ql-desc">Background, work history, and what drives me.</div>
+        <div class="ql-arrow">Explore →</div>
+      </a>
+      <a href="projects.html" class="ql-card">
+        <span class="ql-num">02</span>
+        <div class="ql-name">Projects &amp;<br/>Research</div>
+        <div class="ql-desc">Strategy, analytics, finance, operations — and published reports.</div>
+        <div class="ql-arrow">Explore →</div>
+      </a>
+      <a href="certifications.html" class="ql-card">
+        <span class="ql-num">03</span>
+        <div class="ql-name">Certifications</div>
+        <div class="ql-desc">Professional credentials and qualifications.</div>
+        <div class="ql-arrow">Explore →</div>
+      </a>
+      <a href="achievements.html" class="ql-card">
+        <span class="ql-num">04</span>
+        <div class="ql-name">Achievements</div>
+        <div class="ql-desc">Awards, recognition, and milestones.</div>
+        <div class="ql-arrow">Explore →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-inner">
+  <div class="footer-logo">Vishal Umaria</div>
+  <div class="footer-copy">© 2026 Finance · Consultant · Analyst</div>
+  <div class="footer-nav"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+</div></footer>
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
