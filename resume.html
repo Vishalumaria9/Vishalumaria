@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Resume — Vishal Umaria</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100;200;300;400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<style>
+
+:root{
+  --c0:#152238;--c1:#1F3A5F;--c2:#4E6E8E;--c3:#8FBFE0;--c4:#DFEBF6;--c5:#E1E8EF;
+  --white:#FFFFFF;--bg:#F1F6FB;--text-light:#5a7a8a;
+  --grad-dark:linear-gradient(135deg,#152238 0%,#1F3A5F 60%,#4E6E8E 100%);
+  --font-display:'Lexend Tera',sans-serif;
+  --font-body:'Montserrat',sans-serif;
+  --radius:18px;--radius-sm:10px;
+  --t:all 0.38s cubic-bezier(0.25,0.8,0.25,1);
+  --shadow:0 8px 32px rgba(21,34,56,0.10);
+  --shadow-lg:0 24px 56px rgba(21,34,56,0.18);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--c0);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:100px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(21,34,56,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(143,191,224,0.12);}
+.nav-logo{font-family:var(--font-display);font-size:1.0rem;font-weight:1000;letter-spacing:0.15em;text-transform:uppercase;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--c3);}
+.nav-links{display:flex;gap:6px;list-style:none;}
+.nav-links a{font-size:0.70rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);text-decoration:none;padding:7px 13px;border-radius:100px;transition:var(--t);}
+.nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(143,191,224,0.18);}
+
+.page-header{padding:150px 5% 80px;background:var(--grad-dark);position:relative;overflow:hidden;}
+.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 90% 50%,rgba(143,191,224,0.13) 0%,transparent 70%);}
+.page-header::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(143,191,224,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(143,191,224,0.05) 1px,transparent 1px);background-size:55px 55px;}
+.ph-inner{position:relative;z-index:2;max-width:1400px;margin:0 auto;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;}
+.eyebrow-line{width:28px;height:1px;background:var(--c3);}
+.eyebrow-text{font-size:0.6rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--c3);}
+.page-title{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:200;letter-spacing:-0.04em;color:var(--white);line-height:1.2;margin-bottom:16px;}
+.page-title strong{font-weight:400;color:var(--c3);}
+.page-sub{font-size:0.95rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.6);max-width:540px;}
+
+.page-body{max-width:1400px;margin:0 auto;padding:80px 5% 100px;}
+.s-label{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;}
+.s-label-line{width:22px;height:1px;background:var(--c2);}
+.s-label-text{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--c2);}
+.block-title{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.4rem);font-weight:200;color:var(--c0);line-height:1.3;margin-bottom:16px;letter-spacing:-0.02em;}
+.block-title strong{font-weight:400;color:var(--c1);}
+
+footer{background:var(--c0);padding:36px 5%;border-top:1px solid rgba(143,191,224,0.1);}
+.footer-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-logo{font-family:var(--font-display);font-size:0.6rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);}
+.footer-copy{font-size:0.68rem;font-weight:300;color:rgba(255,255,255,0.22);}
+.footer-nav{display:flex;gap:20px;}
+.footer-nav a{font-size:0.66rem;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--t);}
+.footer-nav a:hover{color:var(--c3);}
+
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-up:nth-child(2){transition-delay:.08s;}
+.fade-up:nth-child(3){transition-delay:.16s;}
+.fade-up:nth-child(4){transition-delay:.24s;}
+.fade-up:nth-child(5){transition-delay:.32s;}
+.fade-up:nth-child(6){transition-delay:.40s;}
+
+
+.resume-layout{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start;}
+.resume-section{background:var(--white);border-radius:var(--radius);padding:36px;border:1px solid var(--c5);margin-bottom:22px;}
+.rs-head{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--c5);}
+.rs-icon{width:36px;height:36px;border-radius:50%;background:var(--c4);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.rs-title{font-family:var(--font-display);font-size:0.7rem;font-weight:300;letter-spacing:0.1em;color:var(--c0);}
+.r-item{padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--c5);}
+.r-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.r-date{font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--c3);margin-bottom:4px;}
+.r-role{font-size:0.9rem;font-weight:600;color:var(--c0);}
+.r-co{font-size:0.76rem;font-weight:400;color:var(--c2);margin-bottom:9px;}
+.r-bullets{list-style:none;padding:0;}
+.r-bullets li{font-size:0.78rem;line-height:1.7;font-weight:300;color:var(--text-light);padding-left:16px;position:relative;margin-bottom:4px;}
+.r-bullets li::before{content:'—';position:absolute;left:0;color:var(--c3);font-size:0.7rem;}
+.sidebar-card{background:var(--white);border-radius:var(--radius);padding:26px;border:1px solid var(--c5);margin-bottom:18px;}
+.sc-title{font-size:0.65rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--c2);margin-bottom:16px;}
+.skill-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px;}
+.skill-label{font-size:0.78rem;font-weight:400;color:var(--c0);}
+.skill-bar-wrap{width:90px;height:3px;background:var(--c5);border-radius:100px;overflow:hidden;}
+.skill-bar{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--c2),var(--c3));}
+.lang-chip{display:inline-flex;align-items:center;background:var(--c4);border-radius:100px;padding:5px 12px;font-size:0.66rem;font-weight:500;color:var(--c1);margin:3px;}
+.dl-cta{background:var(--grad-dark);border-radius:var(--radius);padding:36px;text-align:center;position:relative;overflow:hidden;}
+.dl-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(143,191,224,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(143,191,224,0.06) 1px,transparent 1px);background-size:40px 40px;}
+.dl-cta-text{font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--white);margin-bottom:6px;position:relative;z-index:1;letter-spacing:-0.02em;}
+.dl-cta-sub{font-size:0.76rem;font-weight:300;color:rgba(255,255,255,0.45);margin-bottom:22px;position:relative;z-index:1;}
+.dl-cta-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:100px;background:var(--white);color:var(--c0);font-family:var(--font-body);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:var(--t);position:relative;z-index:1;}
+.dl-cta-btn:hover{background:var(--c4);transform:translateY(-2px);}
+.ph-dl-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:100px;background:var(--white);color:var(--c0);font-family:var(--font-body);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:var(--t);flex-shrink:0;}
+.ph-dl-btn:hover{background:var(--c4);transform:scale(1.03);}
+
+@media(max-width:960px){.nav-links{display:none;}.resume-layout{grid-template-columns:1fr;}.ph-inner{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Vishal <span>Umaria</span></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="resume.html" class="active">Resume</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+
+<div class="page-header">
+  <div class="ph-inner" style="display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Resume</span></div>
+      <h1 class="page-title">Curriculum <strong>Vitae</strong></h1>
+      <p class="page-sub">A complete overview of my education, experience, skills, and certifications.</p>
+    </div>
+    <a href="#" class="ph-dl-btn">⬇ Download PDF</a>
+  </div>
+</div>
+<div class="page-body">
+  <div class="resume-layout">
+    <div>
+      <div class="resume-section fade-up">
+        <div class="rs-head"><div class="rs-icon">💼</div><div class="rs-title">Work Experience</div></div>
+        <div class="r-item"><div class="r-date">2023 — Present</div><div class="r-role">MBA Candidate</div><div class="r-co">Your Business School · Mumbai, India</div><ul class="r-bullets"><li>Specialising in Strategy & Analytics with Dean's List recognition (Top 5%)</li><li>Led 5 consulting engagements with 100% strategy acceptance rate</li><li>Won 1st place at National MBA Strategy Case Competition 2024</li></ul></div>
+        <div class="r-item"><div class="r-date">2021 — 2023</div><div class="r-role">Business Consultant</div><div class="r-co">Consulting Firm · Mumbai, India</div><ul class="r-bullets"><li>Led client engagements across FMCG and tech sectors</li><li>Delivered data-driven strategies improving operational efficiency by 18%</li><li>Awarded Best Consulting Engagement 2023</li></ul></div>
+        <div class="r-item"><div class="r-date">2019 — 2021</div><div class="r-role">Data Analyst</div><div class="r-co">Analytics Company · Bangalore, India</div><ul class="r-bullets"><li>Built BI dashboards using Power BI, Tableau, and custom Python scripts</li><li>Automated reporting pipelines reducing manual effort by 60%</li></ul></div>
+        <div class="r-item"><div class="r-date">2018 — 2019</div><div class="r-role">Research Intern</div><div class="r-co">Market Research Firm · Mumbai, India</div><ul class="r-bullets"><li>Conducted primary and secondary research for 4 client projects</li><li>Developed competitive landscape reports and consumer insights decks</li></ul></div>
+      </div>
+      <div class="resume-section fade-up">
+        <div class="rs-head"><div class="rs-icon">🎓</div><div class="rs-title">Education</div></div>
+        <div class="r-item"><div class="r-date">2023 — 2025</div><div class="r-role">Master of Business Administration (MBA)</div><div class="r-co">Your Business School · Strategy & Analytics</div><ul class="r-bullets"><li>Dean's List — Top 5% of cohort</li><li>Coursework: Corporate Strategy, Financial Modelling, Business Analytics, Operations</li></ul></div>
+        <div class="r-item"><div class="r-date">2015 — 2018</div><div class="r-role">Bachelor of Commerce (Honours)</div><div class="r-co">Your University · First Class Honours</div><ul class="r-bullets"><li>Majors: Accounting, Economics, Statistics</li><li>Final Year GPA: 3.8/4.0</li></ul></div>
+      </div>
+    </div>
+    <div>
+      <div class="sidebar-card fade-up"><div class="sc-title">Core Skills</div>
+        <div class="skill-row"><span class="skill-label">Business Strategy</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+        <div class="skill-row"><span class="skill-label">Data Analytics</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
+        <div class="skill-row"><span class="skill-label">Financial Modelling</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div></div>
+        <div class="skill-row"><span class="skill-label">Market Research</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+        <div class="skill-row"><span class="skill-label">Operations</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:74%"></div></div></div>
+        <div class="skill-row"><span class="skill-label">Presentations</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+      </div>
+      <div class="sidebar-card fade-up"><div class="sc-title">Tools & Technologies</div>
+        <span class="lang-chip">Python</span><span class="lang-chip">SQL</span><span class="lang-chip">Power BI</span>
+        <span class="lang-chip">Excel</span><span class="lang-chip">Tableau</span><span class="lang-chip">R</span>
+        <span class="lang-chip">Salesforce</span><span class="lang-chip">SPSS</span>
+      </div>
+      <div class="sidebar-card fade-up"><div class="sc-title">Languages</div>
+        <span class="lang-chip">English (Fluent)</span><span class="lang-chip">Hindi (Fluent)</span><span class="lang-chip">Gujarati (Native)</span>
+      </div>
+      <div class="dl-cta fade-up">
+        <div class="dl-cta-text">Get the full PDF</div>
+        <div class="dl-cta-sub">Formatted for recruiters and consulting firms.</div>
+        <a href="#" class="dl-cta-btn">⬇ Download Resume</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="footer-inner">
+  <div class="footer-logo">Vishal Umaria</div>
+  <div class="footer-copy">© 2026 Finance · Consultant · Analyst</div>
+  <div class="footer-nav"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+</div></footer>
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
