@@ -56,7 +56,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:100px;padding:0 5%
 .t-role{font-size:0.92rem;font-weight:600;color:var(--c0);margin-bottom:2px;}
 .t-co{font-size:0.76rem;font-weight:500;color:var(--c2);margin-bottom:10px;}
 .t-bullets{list-style:none;padding:0;}
-.t-bullets li{font-size:0.78rem;line-height:1.7;font-weight:300;color:var(--text-light);padding-left:14px;position:relative;margin-bottom:4px;}
+.t-bullets li{font-size:0.78rem;line-height:1.7;font-weight:300;color:var(--text-light);padding-left:14px;position:relative;margin-bottom:4px;text-align:justify;}
 .t-bullets li::before{content:'—';position:absolute;left:0;color:var(--c3);font-size:0.7rem;}
 .t-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
 .t-tag{padding:3px 10px;background:var(--c4);border-radius:100px;font-size:0.58rem;font-weight:500;color:var(--c1);}
@@ -84,9 +84,9 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:100px;padding:0 5%
 
 .certs-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
 .cert-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--white);border:1px solid var(--c5);border-radius:100px;font-size:0.7rem;font-weight:500;color:var(--c0);transition:var(--t);}
-.cert-pill:hover{border-color:var(--c3);background:var(--c4);}
+.cert-pill:hover{border-color:var(--c3);background:var(--c4);color:var(--c0);}
 .cert-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--c3);flex-shrink:0;}
-.cert-pill-inprogress{background: var(--c1); border-style:dashed;border-color:var(--c3);color:var(--c5);}
+.cert-pill-inprogress{background: var(--c1); border-style:dashed;border-color:var(--c3);color:var(--c4);}
 .cert-pill-inprogress .cert-pill-dot{background:transparent;border:1.5px solid var(--c3);animation:pulseDot 2s infinite;}
 @keyframes pulseDot{0%,100%{opacity:1;}50%{opacity:0.35;}}
 
@@ -141,7 +141,7 @@ footer{background:var(--c0);padding:36px 5%;border-top:1px solid rgba(143,191,22
       <div class="s-label"><span class="s-label-line"></span><span class="s-label-text">Professional Summary</span></div>
       <h2 class="block-title">Where <strong>structured thinking</strong> meets business impact</h2>
       <p class="highlight-text">MBA candidate at NMIMS with a strong foundation in strategy, analytics, and operations — with a keen interest in consulting and finance.</p>
-      <p class="body-text">My path is unconventional: I started with a B.Tech in Mechanical Engineering and transitioned into business strategy through hands-on experience at Robach Music, where I led end-to-end strategy, built predictive revenue models, and drove a 95% increase in partnership revenue.</p>
+      <p class="body-text">My path is unconventional: I started with a <strong><strong>B.Tech</strong></strong> in Mechanical Engineering and transitioned into <strong><strong>business strategy</strong></strong> through hands-on experience at Robach Music, where I led end-to-end strategy, built predictive revenue models, and <strong><strong>drove a 95% increase</strong></strong> in partnership revenue.</p>
       <p class="body-text">I'm experienced in market research, financial markets, and cross-functional project execution. Currently pursuing CFA Level 1 and NISM certifications, with a passion for solving complex business problems and delivering data-driven insights that support strategic decision-making.</p>
 
       <div class="badges">
@@ -167,12 +167,12 @@ footer{background:var(--c0);padding:36px 5%;border-top:1px solid rgba(143,191,22
           <div class="t-role">Summer Intern - Mobility Transformation & Strategy</div>
           <div class="t-co">Safexpress Pvt. Ltd.</div>
           <ul class="t-bullets">
-            <li>Led end-to-end strategy for artist partnerships — contract negotiations and revenue evaluation.</li>
-            <li>Conducted market and consumer analysis using KNIME to identify growth opportunities.</li>
-            <li>Built predictive revenue models driving a <strong>95% increase in partnership revenue.</strong></li>
-            <li>Redesigned forecasting processes, reducing operational inefficiencies by ~60%.</li>
-            <li>Built Tableau dashboards tracking KPIs, campaign ROI, and portfolio performance for leadership.</li>
-            <li>Performed competitor benchmarking to guide positioning, pricing, and go-to-market strategy.</li>
+            <li>Led analysis on EV fleet transition strategy, evaluating cost structures, scalability, and operational feasibility across regions.</li>
+            <li>Built cost-benefit and TCO models comparing EV vs ICE fleets, enabling leadership to identify <strong><strong>15–20% cost savings over a 5-year lifecycle</strong></strong></li>
+            <li><strong><strong>Analyze unit economics</strong></strong> to identify profitability levers in fleet operations.</li>
+            <li>Supported <strong><strong>pricing and negotiation strategy</strong></strong> with OEMs & vendors using demand projections and cost insights</li>
+            <li>Identified opportunities to <strong><strong>improve fleet utilization by 20%</strong></strong> through route and load optimization</li>
+            <li>Supported strategy to scale <strong><strong>EV adoption across 50+ regions</strong></strong> across west India</li>
           </ul>
           <div class="t-tags"><span class="t-tag">Strategy</span><span class="t-tag">KNIME</span><span class="t-tag">Tableau</span><span class="t-tag">Revenue Modelling</span><span class="t-tag">GTM</span></div>
         </div>
@@ -232,29 +232,6 @@ footer{background:var(--c0);padding:36px 5%;border-top:1px solid rgba(143,191,22
 
   <div class="divider"></div>
 
-  <!-- EDUCATION -->
-  <div class="fade-up">
-    <div class="s-label"><span class="s-label-line"></span><span class="s-label-text">Education</span></div>
-    <h2 class="block-title">Academic <strong>background</strong></h2>
-    <div class="edu-grid">
-      <div class="edu-card fade-up">
-        <div class="edu-year">2025 — March 2027 (Expected)</div>
-        <div class="edu-degree">Master of Business Administration (MBA)</div>
-        <div class="edu-school">Narsee Monjee Institute of Management Studies (NMIMS), Navi Mumbai</div>
-        <span class="edu-gpa">CGPA: 7.82</span>
-        <div class="edu-notes">Strong focus on strategy, analytics, and operations with interest in consulting and finance. Pursuing CFA Level 1 and NISM certifications alongside the programme.</div>
-      </div>
-      <div class="edu-card fade-up">
-        <div class="edu-year">2019 — June 2023</div>
-        <div class="edu-degree">Bachelor of Technology — Mechanical Engineering</div>
-        <div class="edu-school">Mumbai University, Mumbai, India</div>
-        <span class="edu-gpa">CGPA: 7.42</span>
-        <div class="edu-notes">Built strong analytical and engineering problem-solving foundations. Led DJS Antariskh to two consecutive ESA Rover Challenge wins (2021 & 2022). Best Science Award 2020 & 2021.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="divider"></div>
 
   <!-- SKILLS -->
   <div class="fade-up">
@@ -290,6 +267,31 @@ footer{background:var(--c0);padding:36px 5%;border-top:1px solid rgba(143,191,22
 
   <div class="divider"></div>
 
+  <!-- EDUCATION -->
+  <div class="fade-up">
+    <div class="s-label"><span class="s-label-line"></span><span class="s-label-text">Education</span></div>
+    <h2 class="block-title">Academic <strong>background</strong></h2>
+    <div class="edu-grid">
+      <div class="edu-card fade-up">
+        <div class="edu-year">June 2025 — March 2027 (Expected)</div>
+        <div class="edu-degree">Master of Business Administration (MBA)</div>
+        <div class="edu-school">Narsee Monjee Institute of Management Studies (NMIMS), Navi Mumbai</div>
+        <span class="edu-gpa">CGPA: 7.82 [Trim II]</span>
+        <div class="edu-notes">Strong focus on strategy, analytics, and operations with interest in consulting and finance. Pursuing CFA Level 1 and NISM certifications alongside the programme.</div>
+      </div>
+      <div class="edu-card fade-up">
+        <div class="edu-year">August 2019 — June 2023</div>
+        <div class="edu-degree">B.Tech — Mechanical Engineering</div>
+        <div class="edu-school">Dwarkadas J. Sanghvi College of Engineering, Mumbai University, India</div>
+        <span class="edu-gpa">CGPA: 7.42</span>
+        <div class="edu-notes">Built strong analytical and engineering problem-solving foundations. Led DJS Antariskh to two consecutive ESA Rover Challenge wins (2021 & 2022). Best Science Award 2020 & 2021.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+
   <!-- CERTIFICATIONS -->
   <div class="fade-up">
     <div class="s-label"><span class="s-label-line"></span><span class="s-label-text">Certifications</span></div>
@@ -297,6 +299,7 @@ footer{background:var(--c0);padding:36px 5%;border-top:1px solid rgba(143,191,22
     <div class="certs-row">
       <span class="cert-pill cert-pill-inprogress"><span class="cert-pill-dot"></span>CFA Level 1 — In Progress</span>
       <span class="cert-pill cert-pill-inprogress"><span class="cert-pill-dot"></span>NISM XV — In Progress</span>
+      <span class="cert-pill cert-pill-inprogress"><span class="cert-pill-dot"></span>NISM X-A — In Progress</span>
       <a href="https://www.credly.com/badges/527fc671-d060-4559-85a0-ae261f52eaed/public_url" target="_blank">
       <span class="cert-pill"><span class="cert-pill-dot"></span>McKinsey Forward Program</span></a>
      <a href="https://portal.bloombergforeducation.com/certificates/QJWVJBEYBuAsrq8zfrx3Aomm" target="_blank">
